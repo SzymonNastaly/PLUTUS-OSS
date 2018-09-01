@@ -39,3 +39,6 @@ PlutusOSS/PlutusOSS/local_settings.py
 
 # ENV #
 env/
+
+# Pycharm #
+.idea/
