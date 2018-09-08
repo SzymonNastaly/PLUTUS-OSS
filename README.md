@@ -17,4 +17,4 @@ It is made using Django and the Django Rest Framework.
 
 ## Contact
 
-Szymon Nastaly E-Mail: szymonnastaly(at)gmail.com
+Szymon Nastaly E-Mail: szymonnastaly@gmail.com
