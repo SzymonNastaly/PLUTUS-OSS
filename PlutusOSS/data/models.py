@@ -6,7 +6,7 @@ class Stock(models.Model):
     """Model to describe a single stock
     This is the main model of the app!
     """
-    name = models.CharField(max_length=30, blank=False)
+    name = models.CharField(max_length=90, blank=False)
     ticker = models.CharField(max_length=10, blank=False)
     current_liab = models.BigIntegerField()
     equity = models.BigIntegerField()
