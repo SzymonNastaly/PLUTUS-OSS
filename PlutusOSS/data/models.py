@@ -1,4 +1,9 @@
 from django.db import models
+from django.conf import settings
+
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from rest_framework.authtoken.models import Token
 
 #TODO Create validators (minimal value, etc.)
 
@@ -33,3 +38,9 @@ class Stock(models.Model):
     dividend_ps = models.FloatField()
 #    dividend_ps = models.DecimalField(max_digits=8, decimal_places=2)
 
+
+@receiver(post_save, sender=settings.AUTH_USER_MODEL)
+def create_auth_token(sender, instance=None, created=False, **kwargs):
+    """Creates token for authentication automatically with creation of user"""
+    if created:
+        Token.objects.create(user=instance)

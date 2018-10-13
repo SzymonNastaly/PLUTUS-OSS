@@ -2,6 +2,7 @@ from django.conf.urls import url, include
 from django.urls import path
 from rest_framework import routers
 from data import views
+from rest_framework.authtoken import views as tokenviews
 from django.contrib import admin
 
 """PlutusOSS URL Configuration
@@ -28,4 +29,6 @@ router.register(r'stock', views.StockViewSet)
 urlpatterns = [
     url(r'^', include(router.urls)),
     path('admin/', admin.site.urls),
+    url(r'^api-token-auth/', tokenviews.obtain_auth_token) #returns token for account, when correct login
 ]
+
