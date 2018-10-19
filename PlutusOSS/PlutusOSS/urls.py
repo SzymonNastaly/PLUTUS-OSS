@@ -1,4 +1,5 @@
 from django.conf.urls import url, include
+import rest_framework
 from django.urls import path
 from rest_framework import routers
 from data import views
@@ -29,6 +30,7 @@ router.register(r'stock', views.StockViewSet)
 urlpatterns = [
     url(r'^', include(router.urls)),
     path('admin/', admin.site.urls),
+    path('api-auth/', include('rest_framework.urls')),
     url(r'^api-token-auth/', tokenviews.obtain_auth_token) #returns token for account, when correct login
 ]
 
