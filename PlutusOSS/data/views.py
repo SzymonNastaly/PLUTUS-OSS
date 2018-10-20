@@ -2,11 +2,13 @@ from rest_framework import viewsets
 from data.models import Stock
 from data.serializers import StockSerializer
 from data.serializers import StockListSerializer
+from data.my_permissions import IsAdminOrAuthenticatedReadOnly
 
 class StockViewSet(viewsets.ModelViewSet):
     """ViewSet that represents Stock model"""
     queryset = Stock.objects.all()
     serializer_class = StockSerializer
+    permission_classes = (IsAdminOrAuthenticatedReadOnly,)
     list_serializer_class = StockListSerializer
 
     def get_serializer_class(self):
