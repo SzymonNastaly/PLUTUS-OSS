@@ -30,7 +30,7 @@ router.register(r'stock', views.StockViewSet)
 urlpatterns = [
     url(r'^', include(router.urls)),
     path('admin/', admin.site.urls),
-    path('api-auth/', include('rest_framework.urls')),
-    url(r'^api-token-auth/', tokenviews.obtain_auth_token) #returns token for account, when correct login
+    url(r'^api-token-auth/', tokenviews.obtain_auth_token), #returns token for account, when correct login
+    url(r'^api-auth/', include('rest_framework.urls')), #Login button
 ]
 
