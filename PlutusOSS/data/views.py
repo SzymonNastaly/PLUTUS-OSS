@@ -1,8 +1,10 @@
-from rest_framework import viewsets
 from data.models import Stock
 from data.serializers import StockSerializer
 from data.serializers import StockListSerializer
 from data.my_permissions import IsAdminOrAuthenticatedReadOnly
+
+from rest_framework import viewsets
+
 
 class StockViewSet(viewsets.ModelViewSet):
     """ViewSet that represents Stock model"""
@@ -17,4 +19,3 @@ class StockViewSet(viewsets.ModelViewSet):
                 return self.list_serializer_class
 
         return super(StockViewSet, self).get_serializer_class()
-

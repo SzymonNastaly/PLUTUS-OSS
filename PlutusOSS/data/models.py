@@ -1,11 +1,10 @@
 from django.db import models
 from django.conf import settings
-
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+
 from rest_framework.authtoken.models import Token
 
-#TODO Create validators (minimal value, etc.)
 
 class Stock(models.Model):
     """Model to describe a single stock
@@ -28,7 +27,7 @@ class Stock(models.Model):
     netincome15 = models.BigIntegerField()
     netincome16 = models.BigIntegerField()
     free_cashflow = models.BigIntegerField()
-    eps12 = models.FloatField() #TODO: FloatField or DecimalField?
+    eps12 = models.FloatField()
     eps13 = models.FloatField()
     eps14 = models.FloatField()
     eps15 = models.FloatField()
@@ -36,7 +35,6 @@ class Stock(models.Model):
     eps_e = models.FloatField()
     total_dividend = models.BigIntegerField()
     dividend_ps = models.FloatField()
-#    dividend_ps = models.DecimalField(max_digits=8, decimal_places=2)
 
 
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)

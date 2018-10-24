@@ -1,5 +1,6 @@
 from rest_framework import permissions
 
+
 class IsAdminOrAuthenticatedReadOnly(permissions.BasePermission):
     """
     Custom permission: admin can edit, authenticated user only read (safe_methods)
