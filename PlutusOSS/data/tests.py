@@ -63,7 +63,7 @@ class StockDetailAPIViewTestCase(APITestCase):
         new_user = User.objects.create_user("newuser", "user@email.com", "newpass")
         new_token, created = Token.objects.get_or_create(user=new_user)
         self.client.credentials(HTTP_AUTHORIZATION='Token ' + str(new_token))
-        response = self.client.get("/stock/3", follow=True)
+        response = self.client.get("/stock/3/", follow=True)
 
         self.assertEqual(200, response.status_code)
         self.assertEqual(eval(company_data)["name"], response.data["name"])
