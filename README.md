@@ -13,8 +13,3 @@ The focus of the stock screener is fundamental data, maybe later we will add tec
 The source for the data are the individual annual reports of the companies.
 
 It is made using Django and the Django Rest Framework.
-
-
-## Contact
-
-Szymon Nastaly E-Mail: szymonnastaly@gmail.com
