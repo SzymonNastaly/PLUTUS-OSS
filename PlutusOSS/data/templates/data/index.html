@@ -13,12 +13,14 @@
             for computers - especially if you can’t afford to pay some expensive financial service. </p>
         <p class="font-weight-bold red">PlutusOSS is the solution: a open-source and free financial API</p>
         <h3>How to use it:</h3>
-        <p>1. Create a account at plutusoss.pythonanywhere.com/signup and save your token</p>
-        <p>2. Discover the (browsable) API at plutusoss.pythonanywhere.com/api </p>
+        <p>1. Create a account at <a href="https://plutusoss.pythonanywhere.com/signup/">
+            plutusoss.pythonanywhere.com/signup/</a> and save your token</p>
+        <p>2. Discover the (browsable) API at <a href="https://plutusoss.pythonanywhere.com/api/">
+            plutusoss.pythonanywhere.com/api/</a></p>
         <p>3. Start making requests to get your data. Don't forget: to authorize your request
         you need a custom header - key: Authorization value: "Token " + [youractualtoken]<br>
-        Example: A GET request to <a href="https://plutusoss.pythonanywhere.com/stock/1">
-                plutusoss.pythonanywhere.com/stock/1</a> with the header <code class="text-secondary">
+        Example: A GET request to <a href="https://plutusoss.pythonanywhere.com/api/stock/1/">
+                plutusoss.pythonanywhere.com/api/stock/1/</a> with the header <code class="text-secondary">
         Authorization:Token 193847fky9s02kf7cm4ly92jfm4hx81jdnfmy8173</code>.</p>
         <h3>What I'm planning for the future:</h3>
         <ul>
@@ -27,8 +29,8 @@
             <li>A stock screener -> searching for stocks with certain key figures.</li>
         </ul>
         <h3>What if I lose my token?</h3>
-        <p>You can make an POST request to <a href="https://plutusoss.pythonanywhere.com/api-token-auth">
-            https://plutusoss.pythonanywhere.com/api-token-auth</a> with JSON a body with your username and password <br>
+        <p>You can make an POST request to <a href="https://plutusoss.pythonanywhere.com/api-token-auth/">
+            https://plutusoss.pythonanywhere.com/api-token-auth/</a> with JSON a body with your username and password <br>
         Example: <pre><code class="text-secondary">{
     "username": "youractualusername",
     "password": "yourpassword"
