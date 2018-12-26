@@ -37,7 +37,6 @@ def signup(request):
             user = authenticate(username=username, password=raw_password)
             token, created = Token.objects.get_or_create(user=user)
             login(request, user)
-#            return redirect('/api/')
     else:
         form = UserCreationForm()
     return render(request, 'data/signup.html', {'form': form, 'token': token})
